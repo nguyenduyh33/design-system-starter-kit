@@ -1,56 +1,688 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salesforce Lightning Design System Starter Kit</title>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="robots" content="noindex, nofollow" />
-
-  <!-- Prototype styles -->
-  <link rel="stylesheet" href="/styles/index.css" />
-</head>
-<body>
-  <div class="slds-p-around--large slds-container--center slds-container--small">
-    <h1 class="slds-text-heading--large">
-      Welcome to the Design System Starter Kit
-    </h1>
-    <p class="slds-text-body--regular slds-m-vertical--large">A rapid prototyping environment using the <a href="https://www.lightningdesignsystem.com">Lightning Design System</a>, brought to you by <a href="https://twitter.com/SalesforceUX">Salesforce UX</a>.</p>
-
-    <img src="/assets/img-efficiency.svg" alt="" />
-
-    <h2 class="slds-text-heading--medium slds-m-top--large">Get Started</h2>
-    <p class="slds-text-body--regular slds-m-top--large">Edit files in the <a href="https://github.com/salesforce-ux/design-system-starter-kit/tree/master/src"><code>src</code> directory</a> to start building your prototype.</p>
-    <p class="slds-text-body--regular slds-m-top--large">Lightning Design System component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
-    <hr />
-
-    <h2 class="slds-text-heading--medium slds-m-top--large">TrailheaDX Workshop Tutorial</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">Learn how to design in the browser and quickly prototype with the TrailheaDX 2017 tutorial, “Rapid Prototyping with the Design System Starter Kit”.</p>
-    <p>
-      <a href="https://tdx-starter-kit.herokuapp.com/" class="slds-button slds-button--brand">TrailheaDX Tutorial</a>
-      <a href="/workshop.html" class="slds-button slds-button--neutral">DIY Boilerplate</a>
-      <a href="/workshop-done.html" class="slds-button slds-button--neutral">Result</a>
-    </p>
-    <hr />
-
-    <h2 class="slds-text-heading--medium slds-m-top--large">Example Prototype with Data</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">We’ve put together a prototype to show you what the starter kit is capable of, have a look!</p>
-    <p class="slds-text-body--regular slds-m-vertical--large">Data shown in this example comes from <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/src/views/data/example.json">views/data/example.json</a>. Check out the <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/src/views/data/README.md">README</a> to learn how we are injecting data with "gulp-nunjucks".</p>
-    <p><a href="/example.html" class="slds-button slds-button--brand">Example Prototype</a></p>
-    <hr />
-
-    <h2 class="slds-text-heading--medium slds-m-top--large">Feedback and Questions</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">Ask questions about prototyping using the design system, report issues about the starter kit… <a href="https://github.com/salesforce-ux/design-system-starter-kit/">on the GitHub repository</a>.</p>
-    <hr />
-
-    <h2 class="slds-text-heading--medium slds-m-top--large">See Also</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">More comfortable designing in <a href="https://www.sketchapp.com/">Sketch</a>? Try the <a href="https://github.com/salesforce-ux/design-system-ui-kit/">Design System UI Kit</a>.</p>
-
-  </div>
-
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/vendor/svg4everybody.min.js"></script>
-  <script>svg4everybody();</script>
-</body>
-</html>
+{% extends "_template.html" %} {% block content %}
+<!--
+   Boilerplate for the TrailheaDX 2017 workshop:
+   "Rapid prototyping with the Design System Starter Kit and UI Kit"
+   https://tdx-starter-kit.herokuapp.com/
+   -->
+<!-- PAGE HEADER: https://www.lightningdesignsystem.com/components/page-headers/?variant=record-home -->
+<div class="slds-page-header slds-page-header_object-home">
+   <div class="slds-grid">
+      <div class="slds-col slds-has-flexi-truncate">
+         <div class="slds-media slds-no-space slds-grow">
+            <div class="slds-media__figure">
+               <span class="slds-icon_container slds-icon-standard-drafts">
+                  <svg class="slds-icon" aria-hidden="true">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#drafts"></use>
+                  </svg>
+               </span>
+            </div>
+            <div class="slds-media__body">
+               <p class="slds-text-title_caps slds-line-height_reset">Content</p>
+               <h1 class="slds-page-header__title slds-p-right_x-small">
+                  <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+                     <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                        <span class="slds-truncate" title="this should match My Documents">My Documents</span>
+                        <svg class="slds-button__icon slds-button__icon_right slds-no-flex" aria-hidden="true">
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                        </svg>
+                     </span>
+                  </button>
+               </h1>
+            </div>
+         </div>
+      </div>
+      <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+         <div class="slds-button-group" role="group">
+            <button id="upload-content-button" class="slds-button slds-button_neutral">Upload Content</button>
+            <button class="slds-button slds-button_neutral">New Playlist</button>
+            <div class="slds-button_last">
+               <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">More Actions</span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="slds-grid">
+      <div class="slds-col slds-align-bottom">
+         <p class="slds-text-body_small">10 items • Sorted by Name</p>
+      </div>
+      <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+         <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small" aria-expanded="false">
+            <button class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="List View Controls">
+               <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+               </svg>
+               <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+               </svg>
+               <span class="slds-assistive-text">List View Controls</span>
+            </button>
+         </div>
+         <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_xx-small" aria-expanded="false">
+            <button class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Change view">
+               <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"></use>
+               </svg>
+               <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+               </svg>
+               <span class="slds-assistive-text">Change view</span>
+            </button>
+         </div>
+         <button class="slds-button slds-button_icon slds-m-left_xx-small slds-button_icon-border" title="Refresh">
+            <svg class="slds-button__icon" aria-hidden="true">
+               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+            </svg>
+            <span class="slds-assistive-text">Refresh</span>
+         </button>
+         <div class="slds-button-group" role="group">
+            <button class="slds-button slds-button_icon slds-button_icon-border" title="Filters">
+               <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+               </svg>
+               <span class="slds-assistive-text">Filters</span>
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- /PAGE HEADER -->
+<!-- COLUMNS - already populated for you: https://www.lightningdesignsystem.com/utilities/grid/?example=regions-with-sizing&variant=grid -->
+<div class="slds-grid slds-wrap slds-grid_pull-padded">
+   <!-- COLUMN #1 -->
+   <div class="slds-p-horizontal_large">
+      <!-- TABS: https://www.lightningdesignsystem.com/components/tabs/?modifiers=.slds-is-active&variant=base -->
+      <div class="demo-only">
+         <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" role="tablist">
+               <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1"
+                  id="tab-default-1__item">Tab One</a></li>
+               <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2"
+                  id="tab-default-2__item">Tab Two</a></li>
+               <li class="slds-tabs_default__item" title="Item Three" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3"
+                  id="tab-default-3__item">Tab Three</a></li>
+            </ul>
+            <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+               <table class="slds-table slds-table_resizable-cols slds-table_fixed-layout slds-table_bordered" role="grid">
+                  <thead>
+                     <tr class="slds-line-height_reset">
+                        <th scope="col" class="slds-text-align_right" style="width: 3.25rem;">
+                        </th>
+                        <th scope="col" class="slds-text-align_right" style="width: 3.25rem;">
+                        </th>
+                        <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                           <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                              <span class="slds-assistive-text">Sort </span>
+                              <span class="slds-truncate" title="Name">Name</span>
+                              <div class="slds-icon_container">
+                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                 </svg>
+                              </div>
+                              <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                           </a>
+                        </th>
+                        <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                           <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                              <span class="slds-assistive-text">Sort </span>
+                              <span class="slds-truncate" title="Description">Description</span>
+                              <div class="slds-icon_container">
+                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                 </svg>
+                              </div>
+                              <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                           </a>
+                        </th>
+                        <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                           <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                              <span class="slds-assistive-text">Sort </span>
+                              <span class="slds-truncate" title="Close Date">Last Updated</span>
+                              <div class="slds-icon_container">
+                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                 </svg>
+                              </div>
+                              <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                           </a>
+                        </th>
+                        <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                           <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                              <span class="slds-assistive-text">Sort </span>
+                              <span class="slds-truncate" title="Stage">Audience</span>
+                              <div class="slds-icon_container">
+                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                 </svg>
+                              </div>
+                              <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                           </a>
+                        </th>
+                        <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                           <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                              <span class="slds-assistive-text">Sort </span>
+                              <span class="slds-truncate" title="Confidence">Uploaded By</span>
+                              <div class="slds-icon_container">
+                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                 </svg>
+                              </div>
+                              <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                           </a>
+                        </th>
+                        <th scope="col" style="width: 3.25rem;" class="">
+                           <div class="slds-th__action">
+                              <span class="slds-assistive-text">Actions</span>
+                           </div>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-checkbox">
+                           <input type="checkbox" name="options" id="checkbox-2" value="on">
+                           <label class="slds-checkbox__label" for="checkbox-2">
+                           <span class="slds-checkbox_faux"></span>
+                           <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                           </label>
+                           </span>
+                        </td>
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-icon_container slds-icon-doctype-video" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_medium" aria-hidden="true">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#video"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon</span>
+                           </span>
+                        </td>
+                        <th scope="row" class="">
+                           <div class="slds-truncate" title="Acme - Widgets Video"><a href="javascript:void(0);">Acme - Widgets Video</a></div>
+                        </th>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Acme">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend.</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="4/10/17">4/10/17</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Sales Team">Sales Team</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="jrogers@acme.com"><a href="javascript:void(0);">jrogers@acme.com</a></div>
+                        </td>
+                        <td role="gridcell" style="width: 3.25rem;" class="">
+                           <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                                 <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Show More</span>
+                              </button>
+                              <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions">
+                                 <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                       <span class="slds-truncate" title="Download File">Download File</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-has-divider_top-space" role="separator"></li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Send">Send</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Edit">Edit</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-checkbox">
+                           <input type="checkbox" name="options" id="checkbox-6" value="on">
+                           <label class="slds-checkbox__label" for="checkbox-6">
+                           <span class="slds-checkbox_faux"></span>
+                           <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                           </label>
+                           </span>
+                        </td>
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-icon_container slds-icon-doctype-pdf" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_medium" aria-hidden="true">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon</span>
+                           </span>
+                        </td>
+                        <th scope="row" class="">
+                           <div class="slds-truncate" title="Acme - 200 Widgets"><a href="javascript:void(0);">Acme - 200 Widgets</a></div>
+                        </th>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Acme">Acme</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="1/31/17">1/31/17</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Dev Team">Dev Team</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="bob@acme.com"><a href="javascript:void(0);">bob@acme.com</a></div>
+                        </td>
+                        <td role="gridcell" style="width: 3.25rem;" class="">
+                           <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                                 <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Show More</span>
+                              </button>
+                              <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions">
+                                 <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                       <span class="slds-truncate" title="Download File">Download File</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-has-divider_top-space" role="separator"></li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Send">Send</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Edit">Edit</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-checkbox">
+                           <input type="checkbox" name="options" id="checkbox-10" value="on">
+                           <label class="slds-checkbox__label" for="checkbox-10">
+                           <span class="slds-checkbox_faux"></span>
+                           <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                           </label>
+                           </span>
+                        </td>
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-icon_container slds-icon-doctype-word" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_medium" aria-hidden="true">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#word"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon</span>
+                           </span>
+                        </td>
+                        <th scope="row" class="">
+                           <div class="slds-truncate" title="salesforce.com - 1,000 Widgets"><a href="javascript:void(0);">salesforce.com - 1,000 Widgets</a></div>
+                        </th>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="salesforce.com">salesforce.com</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="1/31/17">1/31/17</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Cool People">Cool People</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="nathan@salesforce.com"><a href="javascript:void(0);">nathan@salesforce.com</a></div>
+                        </td>
+                        <td role="gridcell" style="width: 3.25rem;" class="">
+                           <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                                 <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Show More</span>
+                              </button>
+                              <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions">
+                                 <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                       <span class="slds-truncate" title="Download File">Download File</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-has-divider_top-space" role="separator"></li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Send">Send</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Edit">Edit</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-checkbox">
+                           <input type="checkbox" name="options" id="checkbox-12" value="on">
+                           <label class="slds-checkbox__label" for="checkbox-12">
+                           <span class="slds-checkbox_faux"></span>
+                           <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                           </label>
+                           </span>
+                        </td>
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-icon_container slds-icon-doctype-excel" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_medium" aria-hidden="true">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#excel"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon</span>
+                           </span>
+                        </td>
+                        <th scope="row" class="">
+                           <div class="slds-truncate" title="Acme - 1,200 Widgets"><a href="javascript:void(0);">Acme - 1,200 Widgets</a></div>
+                        </th>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Acme">Acme</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="4/10/17">4/10/17</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Customer Support Group">Customer Support Group</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="jrogers@acme.com"><a href="javascript:void(0);">jrogers@acme.com</a></div>
+                        </td>
+                        <td role="gridcell" style="width: 3.25rem;" class="">
+                           <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                                 <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Show More</span>
+                              </button>
+                              <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions">
+                                 <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                       <span class="slds-truncate" title="Download File">Download File</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-has-divider_top-space" role="separator"></li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Send">Send</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Edit">Edit</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-checkbox">
+                           <input type="checkbox" name="options" id="checkbox-14" value="on">
+                           <label class="slds-checkbox__label" for="checkbox-14">
+                           <span class="slds-checkbox_faux"></span>
+                           <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                           </label>
+                           </span>
+                        </td>
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-icon_container slds-icon-doctype-word" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_medium" aria-hidden="true">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#word"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon</span>
+                           </span>
+                        </td>
+                        <th scope="row" class="">
+                           <div class="slds-truncate" title="Acme - 1,200 Widgets"><a href="javascript:void(0);">Acme - 1,200 Widgets</a></div>
+                        </th>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Acme">Acme</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="4/10/17">4/10/17</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Key Account Managers">Key Account Managers</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="jrogers@acme.com"><a href="javascript:void(0);">jrogers@acme.com</a></div>
+                        </td>
+                        <td role="gridcell" style="width: 3.25rem;" class="">
+                           <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                                 <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Show More</span>
+                              </button>
+                              <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions">
+                                 <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                       <span class="slds-truncate" title="Download File">Download File</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-has-divider_top-space" role="separator"></li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Send">Send</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Edit">Edit</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-checkbox">
+                           <input type="checkbox" name="options" id="checkbox-16" value="on">
+                           <label class="slds-checkbox__label" for="checkbox-16">
+                           <span class="slds-checkbox_faux"></span>
+                           <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                           </label>
+                           </span>
+                        </td>
+                        <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+                           <span class="slds-icon_container slds-icon-doctype-pdf" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_medium" aria-hidden="true">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#pdf"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon</span>
+                           </span>
+                        </td>
+                        <th scope="row" class="">
+                           <div class="slds-truncate" title="Acme - Widgetes Brochure"><a href="javascript:void(0);">Acme - Widgets Brochure</a></div>
+                        </th>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Acme">Acme</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="4/10/7">4/10/17</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="Marketing Group">Marketing Group</div>
+                        </td>
+                        <td role="gridcell" class="">
+                           <div class="slds-truncate" title="jrogers@acme.com"><a href="javascript:void(0);">jrogers@acme.com</a></div>
+                        </td>
+                        <td role="gridcell" style="width: 3.25rem;" class="">
+                           <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                                 <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Show More</span>
+                              </button>
+                              <div class="slds-dropdown slds-dropdown_right slds-dropdown_actions">
+                                 <ul class="slds-dropdown__list" role="menu">
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                       <span class="slds-truncate" title="Download File">Download File</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-has-divider_top-space" role="separator"></li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Send">Send</span>
+                                       </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                       <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                       <span class="slds-truncate" title="Edit">Edit</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+            <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
+         </div>
+      </div>
+      <!-- /TABS -->
+   </div>
+   <!-- /COLUMN #1 -->
+</div>
+<!-- /COLUMNS -->
+<div class="demo-only" style="height: 640px;">
+   <section id="upload-content-modal" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal">
+      <div class="slds-modal__container">
+         <header class="slds-modal__header">
+            <button id="close-modal-button" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+               <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+               </svg>
+               <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Upload Content</h2>
+         </header>
+         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <div class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="input-01">Name</label>
+                           <input type="text" id="input-01" class="slds-input">
+                        </div>
+                        <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="textarea-id-01">Description</label>
+                           <div class="slds-form-element__control">
+                              <textarea id="textarea-id-01" class="slds-textarea" placeholder=""></textarea>
+                           </div>
+                        </div>
+                        <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="combobox-unique-id">Audience</label>
+                           <div class="slds-form-element__control">
+                              <div class="slds-combobox_container slds-has-inline-listbox">
+                                 <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                                       <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Audience Groups">
+                                       <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                                          <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                          </svg>
+                                          <span class="slds-assistive-text">Description of icon</span>
+                                       </span>
+                                    </div>
+                                    <div id="listbox-unique-id" role="listbox">
+                                       <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                                          <li role="presentation" class="slds-listbox__item">
+                                             <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                                                <span class="slds-media__figure">
+                                                   <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                                      </svg>
+                                                      <span class="slds-assistive-text">Description of icon</span>
+                                                   </span>
+                                                </span>
+                                                <span class="slds-media__body">
+                                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                                                </span>
+                                             </span>
+                                          </li>
+                                          <li role="presentation" class="slds-listbox__item">
+                                             <span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                                                <span class="slds-media__figure">
+                                                   <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                                      </svg>
+                                                      <span class="slds-assistive-text">Description of icon</span>
+                                                   </span>
+                                                </span>
+                                                <span class="slds-media__body">
+                                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                                                </span>
+                                             </span>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element">
+                           <span class="slds-form-element__label" id="file-selector-id">Attachment</span>
+                           <div class="slds-form-element__control">
+                              <div class="slds-file-selector slds-file-selector_files">
+                                 <div class="slds-file-selector__dropzone">
+                                    <input type="file" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="file-upload-input-01" aria-describedby="file-selector-id">
+                                    <label class="slds-file-selector__body" for="file-upload-input-01">
+                                       <span class="slds-file-selector__button slds-button slds-button_neutral">
+                                          <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
+                                          </svg>
+                                          Upload Files
+                                       </span>
+                                       <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+            </div>
+         </div>
+         <footer class="slds-modal__footer">
+            <button id="cancel-modal-button" class="slds-button slds-button_neutral">Cancel</button>
+            <button class="slds-button slds-button_brand">Save</button>
+         </footer>
+      </div>
+   </section>
+   <div id="modal-backdrop" class="slds-backdrop"></div>
+</div>
+{% endblock %}
