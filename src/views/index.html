@@ -94,7 +94,7 @@
 <!-- COLUMNS - already populated for you: https://www.lightningdesignsystem.com/utilities/grid/?example=regions-with-sizing&variant=grid -->
 <div class="slds-grid slds-wrap slds-grid_pull-padded">
    <!-- COLUMN #1 -->
-   <div class="slds-p-horizontal_large">
+   <div class="slds-p-around_medium slds-border_right slds-size_4-of-5">
       <!-- TABS: https://www.lightningdesignsystem.com/components/tabs/?modifiers=.slds-is-active&variant=base -->
       <div class="demo-only">
          <div class="slds-tabs_default">
@@ -185,7 +185,7 @@
                      <tr class="slds-hint-parent">
                         <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
                            <span class="slds-checkbox">
-                           <input type="checkbox" name="options" id="checkbox-2" value="on">
+                           <input type="checkbox" name="options" id="checkbox-2" value="on" onchange="change_checkbox(this)">
                            <label class="slds-checkbox__label" for="checkbox-2">
                            <span class="slds-checkbox_faux"></span>
                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
@@ -217,7 +217,8 @@
                         </td>
                         <td role="gridcell" style="width: 3.25rem;" class="">
                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true"
+                                 title="Show More">
                                  <svg class="slds-button__icon" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                  </svg>
@@ -249,7 +250,7 @@
                      <tr class="slds-hint-parent">
                         <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
                            <span class="slds-checkbox">
-                           <input type="checkbox" name="options" id="checkbox-6" value="on">
+                           <input type="checkbox" name="options" id="checkbox-6" value="on" onchange="change_checkbox(this)">
                            <label class="slds-checkbox__label" for="checkbox-6">
                            <span class="slds-checkbox_faux"></span>
                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
@@ -281,7 +282,8 @@
                         </td>
                         <td role="gridcell" style="width: 3.25rem;" class="">
                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true"
+                                 title="Show More">
                                  <svg class="slds-button__icon" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                  </svg>
@@ -313,7 +315,7 @@
                      <tr class="slds-hint-parent">
                         <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
                            <span class="slds-checkbox">
-                           <input type="checkbox" name="options" id="checkbox-10" value="on">
+                           <input type="checkbox" name="options" id="checkbox-10" value="on" onchange="change_checkbox(this)">
                            <label class="slds-checkbox__label" for="checkbox-10">
                            <span class="slds-checkbox_faux"></span>
                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
@@ -345,7 +347,8 @@
                         </td>
                         <td role="gridcell" style="width: 3.25rem;" class="">
                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true"
+                                 title="Show More">
                                  <svg class="slds-button__icon" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                  </svg>
@@ -377,7 +380,7 @@
                      <tr class="slds-hint-parent">
                         <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
                            <span class="slds-checkbox">
-                           <input type="checkbox" name="options" id="checkbox-12" value="on">
+                           <input type="checkbox" name="options" id="checkbox-12" value="on" onchange="change_checkbox(this)">
                            <label class="slds-checkbox__label" for="checkbox-12">
                            <span class="slds-checkbox_faux"></span>
                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
@@ -409,7 +412,8 @@
                         </td>
                         <td role="gridcell" style="width: 3.25rem;" class="">
                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true"
+                                 title="Show More">
                                  <svg class="slds-button__icon" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                  </svg>
@@ -441,7 +445,7 @@
                      <tr class="slds-hint-parent">
                         <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
                            <span class="slds-checkbox">
-                           <input type="checkbox" name="options" id="checkbox-14" value="on">
+                           <input type="checkbox" name="options" id="checkbox-14" value="on" onchange="change_checkbox(this)">
                            <label class="slds-checkbox__label" for="checkbox-14">
                            <span class="slds-checkbox_faux"></span>
                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
@@ -473,7 +477,8 @@
                         </td>
                         <td role="gridcell" style="width: 3.25rem;" class="">
                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true"
+                                 title="Show More">
                                  <svg class="slds-button__icon" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                  </svg>
@@ -505,7 +510,7 @@
                      <tr class="slds-hint-parent">
                         <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
                            <span class="slds-checkbox">
-                           <input type="checkbox" name="options" id="checkbox-16" value="on">
+                           <input type="checkbox" name="options" id="checkbox-16" value="on" onchange="change_checkbox(this)">
                            <label class="slds-checkbox__label" for="checkbox-16">
                            <span class="slds-checkbox_faux"></span>
                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
@@ -537,7 +542,8 @@
                         </td>
                         <td role="gridcell" style="width: 3.25rem;" class="">
                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
-                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="Show More">
+                              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true"
+                                 title="Show More">
                                  <svg class="slds-button__icon" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                  </svg>
@@ -576,10 +582,59 @@
       <!-- /TABS -->
    </div>
    <!-- /COLUMN #1 -->
+   <!-- COLUMN #2 -->
+   <div class="slds-p-around_large slds-size_1-of-5">
+      <!-- CARD: https://www.lightningdesignsystem.com/components/cards/?variant=base -->
+      <article class="slds-card">
+         <div class="slds-card__header slds-grid">
+            <h3 id="items-selected-count">0 Items Selected</h3>
+         </div>
+         <div class="slds-card__body slds-card__body_inner">
+          <ul>
+            <li>
+              <button class="slds-button">
+                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#download"></use>
+                  </svg>
+                  Download
+              </button>
+            </li>
+            <li>
+              <button class="slds-button">
+                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#email"></use>
+                  </svg>
+                  Send
+              </button>
+            </li>
+            <li>
+              <button class="slds-button">
+                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#relate"></use>
+                  </svg>
+                  Add to Playlist
+              </button>
+            </li>
+            <li>
+              <button class="slds-button">
+                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                  </svg>
+                  Delete
+              </button>
+            </li>
+          </ul>
+         </div>
+         <footer class="slds-card__footer"></footer>
+      </article>
+      <!-- /CARD -->
+   </div>
+   <!-- /COLUMN #2 -->
 </div>
 <!-- /COLUMNS -->
 <div class="demo-only" style="height: 640px;">
-   <section id="upload-content-modal" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal">
+   <section id="upload-content-modal" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1"
+      class="slds-modal">
       <div class="slds-modal__container">
          <header class="slds-modal__header">
             <button id="close-modal-button" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
@@ -592,89 +647,93 @@
          </header>
          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
             <div class="slds-form slds-form_stacked">
-                        <div class="slds-form-element">
-                           <label class="slds-form-element__label" for="input-01">Name</label>
-                           <input type="text" id="input-01" class="slds-input">
-                        </div>
-                        <div class="slds-form-element">
-                           <label class="slds-form-element__label" for="textarea-id-01">Description</label>
-                           <div class="slds-form-element__control">
-                              <textarea id="textarea-id-01" class="slds-textarea" placeholder=""></textarea>
+               <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Name</label>
+                  <input type="text" id="input-01" class="slds-input">
+               </div>
+               <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="textarea-id-01">Description</label>
+                  <div class="slds-form-element__control">
+                     <textarea id="textarea-id-01" class="slds-textarea" placeholder=""></textarea>
+                  </div>
+               </div>
+               <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="combobox-unique-id">Audience</label>
+                  <div class="slds-form-element__control">
+                     <div class="slds-combobox_container slds-has-inline-listbox">
+                        <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup" aria-expanded="false" aria-haspopup="listbox"
+                           role="combobox">
+                           <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                              <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id"
+                                 autocomplete="off" role="textbox" placeholder="Search Audience Groups">
+                              <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                                 <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                 </svg>
+                                 <span class="slds-assistive-text">Description of icon</span>
+                              </span>
                            </div>
-                        </div>
-                        <div class="slds-form-element">
-                           <label class="slds-form-element__label" for="combobox-unique-id">Audience</label>
-                           <div class="slds-form-element__control">
-                              <div class="slds-combobox_container slds-has-inline-listbox">
-                                 <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
-                                       <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Audience Groups">
-                                       <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-                                          <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Description of icon</span>
+                           <div id="listbox-unique-id" role="listbox">
+                              <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                                 <li role="presentation" class="slds-listbox__item">
+                                    <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                       role="option">
+                                       <span class="slds-media__figure">
+                                          <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                             <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                             </svg>
+                                             <span class="slds-assistive-text">Description of icon</span>
+                                          </span>
                                        </span>
-                                    </div>
-                                    <div id="listbox-unique-id" role="listbox">
-                                       <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-                                          <li role="presentation" class="slds-listbox__item">
-                                             <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
-                                                <span class="slds-media__figure">
-                                                   <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
-                                                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
-                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-                                                      </svg>
-                                                      <span class="slds-assistive-text">Description of icon</span>
-                                                   </span>
-                                                </span>
-                                                <span class="slds-media__body">
-                                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
-                                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
-                                                </span>
-                                             </span>
-                                          </li>
-                                          <li role="presentation" class="slds-listbox__item">
-                                             <span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
-                                                <span class="slds-media__figure">
-                                                   <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
-                                                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
-                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-                                                      </svg>
-                                                      <span class="slds-assistive-text">Description of icon</span>
-                                                   </span>
-                                                </span>
-                                                <span class="slds-media__body">
-                                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
-                                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
-                                                </span>
-                                             </span>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="slds-form-element">
-                           <span class="slds-form-element__label" id="file-selector-id">Attachment</span>
-                           <div class="slds-form-element__control">
-                              <div class="slds-file-selector slds-file-selector_files">
-                                 <div class="slds-file-selector__dropzone">
-                                    <input type="file" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="file-upload-input-01" aria-describedby="file-selector-id">
-                                    <label class="slds-file-selector__body" for="file-upload-input-01">
-                                       <span class="slds-file-selector__button slds-button slds-button_neutral">
-                                          <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
-                                          </svg>
-                                          Upload Files
+                                       <span class="slds-media__body">
+                                       <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                                       <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
                                        </span>
-                                       <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
-                                    </label>
-                                 </div>
-                              </div>
+                                    </span>
+                                 </li>
+                                 <li role="presentation" class="slds-listbox__item">
+                                    <span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                       role="option">
+                                       <span class="slds-media__figure">
+                                          <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                             <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                             </svg>
+                                             <span class="slds-assistive-text">Description of icon</span>
+                                          </span>
+                                       </span>
+                                       <span class="slds-media__body">
+                                       <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                                       <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                                       </span>
+                                    </span>
+                                 </li>
+                              </ul>
                            </div>
                         </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slds-form-element">
+                  <span class="slds-form-element__label" id="file-selector-id">Attachment</span>
+                  <div class="slds-form-element__control">
+                     <div class="slds-file-selector slds-file-selector_files">
+                        <div class="slds-file-selector__dropzone">
+                           <input type="file" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="file-upload-input-01" aria-describedby="file-selector-id">
+                           <label class="slds-file-selector__body" for="file-upload-input-01">
+                              <span class="slds-file-selector__button slds-button slds-button_neutral">
+                                 <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
+                                 </svg>
+                                 Upload Files
+                              </span>
+                              <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
          <footer class="slds-modal__footer">

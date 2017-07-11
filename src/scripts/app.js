@@ -102,7 +102,6 @@ const showModalEvents = (event) => {
 }
 
 const closeModalEvents = (event) => {
-  console.log('clicked!');
   uploadContentModal.classList.remove('slds-fade-in-open');
   modalBackdrop.classList.remove('slds-backdrop_open');
 }
@@ -110,3 +109,22 @@ const closeModalEvents = (event) => {
 uploadContentButton.addEventListener('click', showModalEvents);
 modalCloseButton.addEventListener('click', closeModalEvents);
 modalCancelButton.addEventListener('click', closeModalEvents);
+
+
+/**
+ * Checkboxes
+ */
+
+let selectedCount = 0;
+
+function change_checkbox(el) {
+  if (el.checked) {
+    selectedCount ++;
+    document.querySelector('#items-selected-count').textContent = selectedCount + ' Item(s) Selected';
+    console.log(selectedCount);
+  } else {
+    selectedCount --;
+    document.querySelector('#items-selected-count').textContent = selectedCount + ' Item(s) Selected';
+    console.log(selectedCount);
+  }
+}
