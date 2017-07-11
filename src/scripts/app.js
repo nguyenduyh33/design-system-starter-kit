@@ -123,14 +123,14 @@ function change_checkbox(el) {
   if (el.checked) {
     selectedCount ++;
     itemsSelectedLabel.textContent = selectedCount + ' Item(s) Selected';
-    contentArea.classList.add('slds-size_4-of-5');
-    actionArea.classList.add('slds-visible');
+    //contentArea.classList.add('slds-size_4-of-5');
+    actionArea.classList.remove('slds-hidden');
   } else {
     selectedCount --;
     itemsSelectedLabel.textContent = selectedCount + ' Item(s) Selected';
-    if (selectedCount === 0) {
-      contentArea.classList.remove('slds-size_4-of-5');
-      actionArea.classList.remove('slds-visible');
-    }
+     if (selectedCount === 0) {
+    //   contentArea.classList.remove('slds-size_4-of-5');
+       actionArea.classList.add('slds-hidden');
+     }
   }
 }

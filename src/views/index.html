@@ -94,7 +94,7 @@
 <!-- COLUMNS - already populated for you: https://www.lightningdesignsystem.com/utilities/grid/?example=regions-with-sizing&variant=grid -->
 <div class="slds-grid slds-wrap slds-grid_pull-padded">
    <!-- COLUMN #1 -->
-   <div id="content-area" class="slds-p-around_medium slds-border_right">
+   <div id="content-area" class="slds-p-around_medium slds-border_right slds-size_3-of-4">
       <!-- TABS: https://www.lightningdesignsystem.com/components/tabs/?modifiers=.slds-is-active&variant=base -->
       <div class="demo-only">
          <div class="slds-tabs_default">
@@ -583,11 +583,42 @@
    </div>
    <!-- /COLUMN #1 -->
    <!-- COLUMN #2 -->
-   <div id="action-area" class="slds-p-around_large slds-size_1-of-5 slds-hidden">
-      <!-- CARD: https://www.lightningdesignsystem.com/components/cards/?variant=base -->
+   <div class="slds-p-around_large slds-size_1-of-4">
+      <!-- CARD 1: https://www.lightningdesignsystem.com/components/cards/?variant=base -->
       <article class="slds-card">
+  <div class="slds-card__header slds-grid">
+
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="demo-only" style="max-width: 320px;">
+  <div class="slds-form-element">
+    <span class="slds-form-element__label" id="file-selector-id">Upload Content</span>
+    <div class="slds-form-element__control">
+      <div class="slds-file-selector slds-file-selector_images">
+        <div class="slds-file-selector__dropzone">
+          <input type="file" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="file-upload-input-01" aria-describedby="file-selector-id">
+          <label class="slds-file-selector__body" for="file-upload-input-01">
+            <span class="slds-file-selector__button slds-button slds-button_neutral">
+              <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
+              </svg>Browse Files</span>
+            <span class="slds-file-selector__text slds-medium-show">or Drop File</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</article>
+      
+      <!-- /CARD 1 -->
+
+
+      <!-- CARD 2: https://www.lightningdesignsystem.com/components/cards/?variant=base -->
+      <!--<article class="slds-card">
          <div class="slds-card__header slds-grid">
-            <h3 id="items-selected-count">0 Items Selected</h3>
+            <h3 id="items-selected-countz">0 Items Selected</h3>
          </div>
          <div class="slds-card__body slds-card__body_inner">
           <ul>
@@ -626,12 +657,87 @@
           </ul>
          </div>
          <footer class="slds-card__footer"></footer>
-      </article>
-      <!-- /CARD -->
+      </article>-->
+      <!-- /CARD 2 -->
    </div>
    <!-- /COLUMN #2 -->
 </div>
 <!-- /COLUMNS -->
+
+
+<!-- Utility Bar -->
+<footer id="action-area" class="slds-utility-bar_container slds-hidden" aria-label="Utility Bar">
+  <h2 class="slds-assistive-text">Utility Bar</h2>
+  <ul class="slds-utility-bar">
+    <li class="slds-utility-bar__item">
+      <h3 id="items-selected-count" class="slds-button slds-utility-bar__action" aria-pressed="false" style="color:#ff9a3c">
+        Test
+      </h3>
+    </li>
+    <li class="slds-utility-bar__item">
+      <button class="slds-button slds-utility-bar__action" aria-pressed="false">
+        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#download"></use>
+        </svg>
+        <span class="slds-utility-bar__text">Download</span>
+      </button>
+    </li>
+    <li class="slds-utility-bar__item">
+      <button class="slds-button slds-utility-bar__action" aria-pressed="false">
+        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#email"></use>
+        </svg>
+        <span class="slds-utility-bar__text">Send</span>
+    </li>
+    <li class="slds-utility-bar__item">
+      <button class="slds-button slds-utility-bar__action" aria-pressed="false">
+        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#relate"></use>
+        </svg>
+        <span class="slds-utility-bar__text">Add to Playlist</span>
+      </button>
+    </li>
+    <li class="slds-utility-bar__item">
+      <button class="slds-button slds-utility-bar__action" aria-pressed="false">
+        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+        </svg>
+        <span class="slds-utility-bar__text">Delete</span>
+      </button>
+    </li>
+  </ul>
+  <section class="slds-utility-panel slds-grid slds-grid_vertical" role="dialog" aria-labelledby="panel-heading-01">
+    <header class="slds-utility-panel__header slds-grid slds-shrink-none">
+      <div class="slds-media slds-media_center slds-size_1-of-1">
+        <div class="slds-media__figure slds-m-right_x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#call"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h2 id="panel-heading-01">Call</h2>
+        </div>
+      </div>
+      <div class="slds-col_bump-left slds-shrink-none">
+        <button class="slds-button slds-button_icon slds-button_icon" title="Close Panel">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+          </svg>
+          <span class="slds-assistive-text">Close Panel</span>
+        </button>
+      </div>
+    </header>
+    <div class="slds-utility-panel__body">
+      <div class="slds-align_absolute-center">Utility Panel Body</div>
+    </div>
+  </section>
+</footer>
+
+<!-- Utility Bar -->
+
+
 <div class="demo-only" style="height: 640px;">
    <section id="upload-content-modal" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1"
       class="slds-modal">
