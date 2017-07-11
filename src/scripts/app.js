@@ -114,17 +114,23 @@ modalCancelButton.addEventListener('click', closeModalEvents);
 /**
  * Checkboxes
  */
-
 let selectedCount = 0;
+const itemsSelectedLabel = document.querySelector('#items-selected-count');
+const contentArea = document.querySelector('#content-area');
+const actionArea = document.querySelector('#action-area');
 
 function change_checkbox(el) {
   if (el.checked) {
     selectedCount ++;
-    document.querySelector('#items-selected-count').textContent = selectedCount + ' Item(s) Selected';
-    console.log(selectedCount);
+    itemsSelectedLabel.textContent = selectedCount + ' Item(s) Selected';
+    contentArea.classList.add('slds-size_4-of-5');
+    actionArea.classList.add('slds-visible');
   } else {
     selectedCount --;
-    document.querySelector('#items-selected-count').textContent = selectedCount + ' Item(s) Selected';
-    console.log(selectedCount);
+    itemsSelectedLabel.textContent = selectedCount + ' Item(s) Selected';
+    if (selectedCount === 0) {
+      contentArea.classList.remove('slds-size_4-of-5');
+      actionArea.classList.remove('slds-visible');
+    }
   }
 }
