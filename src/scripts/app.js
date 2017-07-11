@@ -40,7 +40,7 @@ const toggleParent = (element) => toggle(element.parentNode)
  * Dropdown menus
  * https://www.lightningdesignsystem.com/components/menus/
  */
-const dropdownButtons = document.querySelectorAll('.slds-dropdown-trigger--click > .slds-button')
+const dropdownButtons = document.querySelectorAll('.slds-dropdown-trigger_click > .slds-button')
 
 Array.from(dropdownButtons)
   .forEach((button) =>
@@ -85,3 +85,28 @@ Array.from(defaultTabs).forEach((tab) => {
 Array.from(scopedTabs).forEach((tab) => {
   tab.addEventListener('click', assignTabEvents, false)
 })
+
+
+/**
+ * Upload Content Modal
+ */
+const uploadContentButton = document.getElementById('upload-content-button');
+const uploadContentModal = document.getElementById('upload-content-modal');
+const modalBackdrop = document.getElementById('modal-backdrop');
+const modalCloseButton = document.getElementById('close-modal-button');
+const modalCancelButton = document.getElementById('cancel-modal-button');
+
+const showModalEvents = (event) => {
+  uploadContentModal.classList.add('slds-fade-in-open');
+  modalBackdrop.classList.add('slds-backdrop_open');
+}
+
+const closeModalEvents = (event) => {
+  console.log('clicked!');
+  uploadContentModal.classList.remove('slds-fade-in-open');
+  modalBackdrop.classList.remove('slds-backdrop_open');
+}
+
+uploadContentButton.addEventListener('click', showModalEvents);
+modalCloseButton.addEventListener('click', closeModalEvents);
+modalCancelButton.addEventListener('click', closeModalEvents);
